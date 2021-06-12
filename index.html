@@ -1,0 +1,290 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Macondo+Swash+Caps&family=Nova+Flat&family=Rubik&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="background2.jpg">
+<center>
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="cat.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>british shorthair (cat breed)</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>humming bird</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+<!--number 2-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="banana.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>banana</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>banana</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Draw</h4>
+      </div>
+
+    </div>
+  </ol>
+<!--number 3-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="bird.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>european pied flycatcher (bird)</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>chickadee</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+<!--number 4-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="book.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>book</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>screen, CRT screen</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 5-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img id="bottle" src="bottle.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>drinking water</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>lampshade, lamp shade</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 6-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="flower.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>sunflower</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>daisy</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 7-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="frog.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>european tree frog</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>weevil</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 8-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="glove.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>glove</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span> buckle</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 9-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="grass.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>wheat grass</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>quill, quillpen</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+  <!--number 10-->
+  <ol>
+    <div class="main_div">
+      <li class="col-sm-4 col-xs-12">
+        <b>test image:</b>
+        <img src="rock.jpg">
+      </li>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Google Lens</b> - 
+        <span>granite (rock type)</span>
+      </h5>
+
+      <h5 class="col-sm-4 col-xs-12">
+        output on <b>Mobile net</b> - 
+        <span>spotlight, spot</span>
+      </h5>
+
+      <div class="mini-result">
+        <h4>Result</h4>
+        <hr>
+        <h4>Google Lens Wins</h4>
+      </div>
+
+    </div>
+  </ol>
+
+  <p>
+    Out of all 10 images between <b>Google Lens</b> and <b>Mobile Net</b>, <br> <b>Google Lens</b> Wins with 9 wins and one draw. <br> <b>Mobile Net</b> lost 9 times and got one draw. <br> In conculsion <b>Google Lens</b> is way better. 
+  </p>
+</center>
+
+<div class="copy_right_footer">
+  Developed by - Prakhar
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
